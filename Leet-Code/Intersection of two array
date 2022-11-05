@@ -1,0 +1,21 @@
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        
+        intersection = []
+        
+        minsize = min(len(nums1), len(nums2))
+        
+        if(minsize == len(nums1)):
+            
+            for i in range(minsize):
+                if nums1[i] in nums2 :
+                    intersection.insert(i,nums1[i])
+                    nums2[nums2.index(nums1[i])] = -1
+        else: 
+            for i in range(minsize):
+                if nums2[i] in nums1 :
+                    intersection.insert(i,nums2[i])
+                    nums1[nums1.index(nums2[i])] = -1
+        
+        return intersection
+                
