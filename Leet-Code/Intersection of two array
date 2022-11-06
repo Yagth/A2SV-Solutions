@@ -19,4 +19,25 @@ class Solution:
                 i+=1
                 
         return intersection
+        
+   """ class Solution:
+        def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+
+            intersection = []
+            firstListCount = defaultdict(int)
+
+            if len(nums2) < len(nums1):
+                temp = nums1
+                nums1 = nums2
+                nums2 = temp
+
+            for i in range(len(nums1)):
+                firstListCount[nums1[i]] += 1
+
+            for i in range(len(nums2)):
+                if firstListCount[nums2[i]] > 0:
+                    firstListCount[nums2[i]] -= 1
+                    intersection.append(nums2[i])
+
+            return intersection  """
                 
