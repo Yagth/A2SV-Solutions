@@ -1,4 +1,5 @@
 import Data.Char(toLower)
+
 main :: IO ()
 main = do
     inputs <- getContents
