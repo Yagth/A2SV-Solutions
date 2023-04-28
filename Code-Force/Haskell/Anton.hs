@@ -7,4 +7,4 @@ main = do
     let xs = filter isAlphaNum line
         uniques = length (nub xs)
         
-    putStrLn $ show uniques
+    print uniques
